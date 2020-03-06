@@ -4,11 +4,12 @@ Senior Project 2019-20
 
 Project repository for Dominic Holloman, Kevin Worsley
 
-* Files:
+* Files (Neural Network):
   * cnn-model-train.py : Training file for a convolutional neural network, training on the fer2013 dataset
   * dataset-load.py : Algorithm to take fer2013.csv and turn it into useful training format
   * image-inference.py : Runs a webcam object and performs inference with the model over its stream
   * keras-converter.py : Converts standard Tensorflow model format to TFLite for embedded device
+  * pi-inference.py : Script for image collection and inference that runs on the Pi Zero W
   
 # Model information
 
