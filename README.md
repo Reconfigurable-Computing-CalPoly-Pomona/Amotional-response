@@ -1,4 +1,4 @@
-## Low-Cost Embedded Animatronic, Emotion Detection
+# Low-Cost Embedded Animatronic, Emotion Detection
 
 Senior Project 2019-20
 
@@ -11,7 +11,9 @@ Project repository for Dominic Holloman, Kevin Worsley
   * keras-converter.py : Converts standard Tensorflow model format to TFLite for embedded device
   * pi-inference.py : Script for image collection and inference that runs on the Pi Zero W
   
-# Model information
+Presentation Link: https://youtu.be/V8JK8axZZhU
+  
+## Model information
 
 The model is a Convolutional Neural Network, trained on the fer2013 emotion dataset (3995 examples per emotion). The network passes information through a variety of convolutional modules, before being flattened and loaded into a decreasing net of densely-connected layers. The input data is augmented to improve its accuracy in a real world environment. 
 
