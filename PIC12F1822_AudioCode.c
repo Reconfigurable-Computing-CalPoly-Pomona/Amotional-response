@@ -1,3 +1,6 @@
+//adapted code from Ray Ring on CircuitSalad.com
+
+
 #include <PIC12F1822.h>
 #pragma config WDTE = 0x00;
 #pragma config BOREN = 0x00;
