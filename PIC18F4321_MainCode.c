@@ -128,7 +128,7 @@ void EmotionRead(unsigned int EmoCode){
             break;
         
         case 0x01: //Happy
-            if(EmoCodeOLD == EmoCode){
+            if(EmoCodeOLD == EmoCode){ //prevents song and dance from looping
                 HappyFace();
                 PORTAbits.RA3 = 0;
             }
@@ -182,11 +182,7 @@ void delay(unsigned int itime){
 void sendSPI(char input){
     unsigned char TempVar;
     TempVar = SSPBUF;  // Clears BF
-    //PIR1bits.SSPIF = 0;  // Clear interrupt flag
-    //SS = 0;
     SSPBUF = input;
-    //while(!SSPSTATbits.BF); // wait for transfer to complete
-    //SS = 1;
 }
 
 void initializeMicrocontroller(){

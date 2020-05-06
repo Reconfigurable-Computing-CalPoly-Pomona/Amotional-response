@@ -77,14 +77,12 @@ void SoundGen(int noteL, int noteH, int timing){
     
     CCPR1L = (sine[((char *)&PhaseAccum)[3]]) >> 2;// load MSbits 7-2 duty cycle value into CCPRIL
     CCP1CON ^=((sine[((char *)&PhaseAccum)[3]]) & 0x03) << 4;// load in bits 1-0 into 5 and 4 of CCP1CON
-        //delay(1);
-    //////duty cycle value byte is now loaded for next cycle coming//////
+    //duty cycle value byte is now loaded for next cycle coming//////
     if(PIR1bits.ADIF == 0)
       ADCON0bits.GO = 1; //start ADC here to get value into PhaseShift to change Freq
-//    //will have to go around the loop one time before ready flag is high
+    //will have to go around the loop one time before ready flag is high
     if(PIR1bits.ADIF != 0){ //if ADC read complete load values and clear flag
-        ((char *)&PhaseShift)[1] = noteL; //load ADRESL into PhaseShift // higher means faster
-        //1bit == 0.0048V, 440Hz == 2.02V // increased ADRESH bits means faster
+        ((char *)&PhaseShift)[1] = noteL; //load ADRESL into PhaseShift
         ((char *)&PhaseShift)[2] = noteH; //load ADRESH into PhaseShift
         PIR1bits.ADIF = 0;//clear flag so next time ADC can run
         }
@@ -97,33 +95,33 @@ void SoundGen(int noteL, int noteH, int timing){
 
 void main() {
     int change = 1;
-Init_Main();//configure part
-    while(1){ //alway do this
-        if(PORTAbits.RA0 == 1){
+Init_Main();
+    while(1){ 
+        if(PORTAbits.RA0 == 1){ //happy code
             if(change == 1){
-                PORTAbits.RA1 = 1;
-                SoundGen(C5noteL, C5noteH, 2500); //627
-                delay(35);                     //523
-                SoundGen(C5noteL, C5noteH, 1500); //627
-                delay(35);                     //523
-                SoundGen(G5noteL, G5noteH, 10000); //784
-                delay(100);                     //784
+                PORTAbits.RA1 = 1; //enables speaker output
+                SoundGen(C5noteL, C5noteH, 2500); //plays happy song
+                delay(35);                     
+                SoundGen(C5noteL, C5noteH, 1500);
+                delay(35);                     
+                SoundGen(G5noteL, G5noteH, 10000);
+                delay(100);                     
                 change = 0;
-                PORTAbits.RA1 = 0;
+                PORTAbits.RA1 = 0; //disables speaker output
                 }
             }
         
-        if(PORTAbits.RA4 == 1){
+        if(PORTAbits.RA4 == 1){ //sad code
             if(change == 1){
-                PORTAbits.RA1 = 1;
-                SoundGen(G5noteL, G5noteH, 2500); //627
-                delay(35);                     //523
-                SoundGen(G5noteL, G5noteH, 1500); //627
-                delay(35);                     //523
-                SoundGen(C5noteL, C5noteH, 10000); //784
-                delay(100);                     //784
+                PORTAbits.RA1 = 1; //enables speaker output
+                SoundGen(G5noteL, G5noteH, 2500); //plays sad song
+                delay(35);                     
+                SoundGen(G5noteL, G5noteH, 1500);
+                delay(35);                     
+                SoundGen(C5noteL, C5noteH, 10000);
+                delay(100);                     
                 change = 0;
-                PORTAbits.RA1 = 0;
+                PORTAbits.RA1 = 0; //disables speaker output
                 }
             }
         
