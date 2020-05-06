@@ -13,7 +13,7 @@ Project repository for Dominic Holloman, Kevin Worsley
   
 * Files (Microcontrollers):
   * PIC18F4321_MainCode.C : This is the code from the presetation for the main microcontroller.
-  * PIC12F1822_AudioCode.C : This is the code from the presetation for the secondary microcontroller responsible for audio generation.
+  * PIC12F1822_AudioCode.C : This is the code from the presetation for the microcontroller responsible for audio generation.
   
 Presentation Link: https://youtu.be/V8JK8axZZhU
   
