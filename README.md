@@ -11,6 +11,10 @@ Project repository for Dominic Holloman, Kevin Worsley
   * keras-converter.py : Converts standard Tensorflow model format to TFLite for embedded device
   * pi-inference.py : Script for image collection and inference that runs on the Pi Zero W
   
+* Files (Microcontrollers):
+  * PIC18F4321_MainCode.C : This is the code from the presetation for the main microcontroller.
+  * PIC12F1822_AudioCode.C : This is the code from the presetation for the secondary microcontroller responsible for audio generation.
+  
 Presentation Link: https://youtu.be/V8JK8axZZhU
   
 ## Model information
