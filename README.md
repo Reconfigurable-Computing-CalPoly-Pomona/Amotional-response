@@ -4,6 +4,11 @@ Senior Project 2019-20
 
 Project repository for Dominic Holloman, Kevin Worsley
 
+**Overview**
+
+This project aims to produce an animatronic figure at low cost with a great deal of expressive potential. The device contains a fully embedded device design, using lights, sound, and simple motion to react to a user’s emotion,as expressed by their face. A convolutional  neural network trained to recognize four emotions is deployed, providing a level of interactivity often not seen in commercial products, particularly in the field of animatronics. 
+
+
 * Files (Neural Network):
   * cnn-model-train.py : Training file for a convolutional neural network, training on the fer2013 dataset
   * dataset-load.py : Algorithm to take fer2013.csv and turn it into useful training format
@@ -17,16 +22,12 @@ Project repository for Dominic Holloman, Kevin Worsley
   
 Presentation Link: https://youtu.be/V8JK8axZZhU
   
-## Model information
 
-The model is a Convolutional Neural Network, trained on the fer2013 emotion dataset (3995 examples per emotion). The network passes information through a variety of convolutional modules, before being flattened and loaded into a decreasing net of densely-connected layers. The input data is augmented to improve its accuracy in a real world environment. 
-
-
-Supervising Professor:
+**Supervising Professor:**
 
 - Mohamed El-Hadedy: Assistant Professor, Electrical and Computer Engineering department, College of Engineering, California State Polytechnic University, Pomona.
 
-Collaborators:
+**Collaborators:**
 
 1. Wen-Mei Hwu: Director of Center for Cognitive Computing Systems Research and Walter J. Sanders III-AMD Endowed Chair Professor in Elecrical and Computer Engineering at UIUC
 
@@ -34,3 +35,12 @@ Collaborators:
 Electrical and Computer Engineering
 
 California Polytechnic University, Pomona
+
+
+Link to group presentation: https://drive.google.com/file/d/1aiVQg7ylKirzK7Sdlxko85OaI9Ihgssp/view?usp=sharing
+
+--------------------------------------
+
+**Model information**
+
+The model is a Convolutional Neural Network, trained on the fer2013 emotion dataset (3995 examples per emotion). The network passes information through a variety of convolutional modules, before being flattened and loaded into a decreasing net of densely-connected layers. The input data is augmented to improve its accuracy in a real world environment. 
