@@ -58,7 +58,8 @@ The model is a Convolutional Neural Network, trained on the fer2013 emotion data
 The hardware are designed using PIC microcontrollers from coursework at Cal Poly Pomona and provide sufficient IO control to manage the hardware peripherals dedicated to creating believable emotional responses. After an emotion is detected by the Convolutional Neural Network, the microcontrollers choose an appropriate reaction to the user's emotion and display that reaction with the peripherals.
 
 <p align="center">
-<img src="https://github.com/Reconfigurable-Computing-CalPoly-Pomona/Emotional-Response-Animatronic/Pictures/SP_Render_Cropped.png" >
+<img src= "https://github.com/Reconfigurable-Computing-CalPoly-Pomona/Emotional-Response-Animatronic/blob/master/Pictures/SP_Render_Cropped.png" >
+	
 
 	Figure 1: 3D Model of the Animatronic
 </p>
