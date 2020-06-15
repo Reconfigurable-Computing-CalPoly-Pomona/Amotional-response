@@ -8,7 +8,7 @@ Project repository for Dominic Holloman, Kevin Worsley
 
 This project aims to produce an animatronic figure at low cost with a great deal of expressive potential. The device contains a fully embedded device design, using lights, sound, and simple motion to react to a user’s emotion,as expressed by their face. A convolutional  neural network trained to recognize four emotions is deployed, providing a level of interactivity often not seen in commercial products, particularly in the field of animatronics. 
 
-
+**Software**
 * Files (Neural Network):
   * cnn-model-train.py : Training file for a convolutional neural network, training on the fer2013 dataset
   * dataset-load.py : Algorithm to take fer2013.csv and turn it into useful training format
@@ -17,8 +17,13 @@ This project aims to produce an animatronic figure at low cost with a great deal
   * pi-inference.py : Script for image collection and inference that runs on the Pi Zero W
   
 * Files (Microcontrollers):
-  * PIC18F4321_MainCode.C : This is the code from the presetation for the main microcontroller.
-  * PIC12F1822_AudioCode.C : This is the code from the presetation for the microcontroller responsible for audio generation.
+  * Demo_PIC18F4321_MainCode.C : This is the code from the presetation for the main microcontroller.
+  * Demo_PIC12F1822_AudioCode.C : This is the code from the presetation for the microcontroller responsible for audio generation.
+  
+**Hardware**
+* Files:
+  * SeniorProject.PCB : Current PCB design
+  * SeniorProject.sch : Current schematic of hardware
   
 Presentation Link: https://youtu.be/V8JK8axZZhU
   
@@ -41,6 +46,8 @@ Link to group presentation: https://drive.google.com/file/d/1aiVQg7ylKirzK7Sdlxk
 
 --------------------------------------
 
-**Model information**
+**Model Information**
 
 The model is a Convolutional Neural Network, trained on the fer2013 emotion dataset (3995 examples per emotion). The network passes information through a variety of convolutional modules, before being flattened and loaded into a decreasing net of densely-connected layers. The input data is augmented to improve its accuracy in a real world environment. 
+
+**Hardware Information**
